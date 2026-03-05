@@ -93,17 +93,6 @@ export default function Projects() {
                         GitHub ↗
                       </Link>
                     )}
-                    {project.demo && (
-                      <Link
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo ↗
-                      </Link>
-                    )}
                   </div>
                 </CardContent>
               </Card>

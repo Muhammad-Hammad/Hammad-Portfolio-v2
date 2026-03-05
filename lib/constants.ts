@@ -13,6 +13,7 @@ export const PERSONAL = {
   linkedin: "https://www.linkedin.com/in/syed-muhammad-hammad-ghani/",
   github: "https://github.com/Muhammad-Hammad",
   portfolio: "https://hammad-ghani.netlify.app/",
+  resume: "https://drive.google.com/file/d/1UUTYUhYKuoubn-y52Pq_vHl7NYGb6XJh/view?usp=sharing",
   location: "Karachi, Pakistan",
   availability: "Available for remote work",
   yearsExperience: "5+",
@@ -106,7 +107,7 @@ export const PROJECTS = [
     description: "An AI-powered proposal and contract generator for freelance engineers. Paste a job post, get a winning proposal and airtight Statement of Work in 60 seconds. Built with Next.js, Gemini API, and fully vibe coded using AI-augmented development.",
     tech: ["Next.js", "TypeScript", "Gemini API", "Tailwind", "ShadCN/UI", "Framer Motion"],
     github: "https://github.com/Muhammad-Hammad/Proposal-Forge",
-    demo: "https://github.com/Muhammad-Hammad/Proposal-Forge", // Using github link as demo placeholder if none provided
+    demo: "",
     featured: true
   },
   {

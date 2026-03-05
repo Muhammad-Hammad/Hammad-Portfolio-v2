@@ -36,9 +36,45 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Subtle radial gradient glow */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] opacity-60 mix-blend-screen" />
+      {/* Subtle radial gradient glow with animation */}
+      <motion.div 
+        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none"
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [0.5, 0.7, 0.5]
+        }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity,
+          ease: "easeInOut" 
+        }}
+      >
+        <div className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] bg-primary/10 rounded-full blur-[100px] md:blur-[120px] mix-blend-screen" />
+      </motion.div>
+
+      {/* Floating particles background effect */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 rounded-full bg-primary/20 blur-[1px]"
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
+            }}
+            animate={{
+              y: [null, Math.random() * -500],
+              x: [null, Math.random() * 200 - 100],
+              opacity: [0, 0.5, 0],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              ease: "linear",
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-4xl mx-auto px-6 relative z-10 w-full flex flex-col items-center text-center">
@@ -91,7 +127,7 @@ export default function Hero() {
               </motion.a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-12 text-base font-medium border-border/50 bg-surface/30 hover:bg-surface">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={PERSONAL.resume} target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </a>
             </Button>
