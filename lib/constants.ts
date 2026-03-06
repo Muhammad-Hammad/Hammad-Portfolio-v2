@@ -114,7 +114,7 @@ export const PROJECTS = [
     title: "Spotify Playlist Generator",
     description: "AI-powered playlist generator that creates personalized Spotify playlists based on your mood, using OpenAI's API and Spotify Web API.",
     tech: ["React", "TypeScript", "OpenAI API"],
-    github: "https://github.com/muhammad-hammad/spotify-playlist-generator",
+    github: "https://github.com/Muhammad-Hammad/spotify-playlist-fetcher",
     demo: "",
     featured: false
   }
